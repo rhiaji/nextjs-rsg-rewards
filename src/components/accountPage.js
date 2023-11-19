@@ -87,6 +87,14 @@ const AccountPage = () => {
         setBalance(balances)
     }
 
+    function starbits() {
+        window.open('https://tribaldex.com/trade/STARBITS', '_blank')
+    }
+
+    function starpro() {
+        window.open('https://tribaldex.com/trade/STARPRO', '_blank')
+    }
+
     return (
         <div className={style.container}>
             <div className={style.content}>
@@ -113,7 +121,7 @@ const AccountPage = () => {
                                         <button>
                                             <FontAwesomeIcon icon={faPaperPlane} />
                                         </button>
-                                        <button>
+                                        <button onClick={starpro}>
                                             <FontAwesomeIcon icon={faShop} />
                                         </button>
                                     </>
@@ -129,7 +137,7 @@ const AccountPage = () => {
                                         <button>
                                             <FontAwesomeIcon icon={faPaperPlane} />
                                         </button>
-                                        <button>
+                                        <button onClick={starbits}>
                                             <FontAwesomeIcon icon={faShop} />
                                         </button>
                                     </>
