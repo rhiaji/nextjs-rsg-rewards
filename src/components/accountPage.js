@@ -195,7 +195,7 @@ const AccountPage = () => {
                             </a>
                         </div>
                         <div>
-                            <h3>MarketPlace</h3>
+                            <h3>3rd Party Marketplaces</h3>
                             <span>
                                 <a href="https://www.risingstargame.com/game.asp">
                                     <p>rsgfam</p>
