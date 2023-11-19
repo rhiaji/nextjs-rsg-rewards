@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 60px;
+    background-color: #1a1919;
+}
+
+.login {
+    background-color: #1a75b2;
+    width: 60px;
+    height: 25px;
+    color: inherit;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.4s ease;
+}
+
+.login:hover {
+    color: rgb(128, 255, 78);
+    background-color: #0b4266;
+}
+
+.logout {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.logout:hover {
+    color: rgb(194, 76, 76);
+}
