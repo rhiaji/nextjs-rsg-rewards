@@ -197,10 +197,10 @@ const AccountPage = () => {
                         <div>
                             <h3>3rd Party Marketplaces</h3>
                             <span>
-                                <a href="https://www.risingstargame.com/game.asp" target="_blank">
+                                <a href="https://rsgfam.com/" target="_blank">
                                     <p>rsgfam</p>
                                 </a>
-                                <a href="https://www.risingstargame.com/game.asp" target="_blank">
+                                <a href="https://nftm.art/" target="_blank">
                                     <p>NFTMart</p>
                                 </a>
                             </span>
