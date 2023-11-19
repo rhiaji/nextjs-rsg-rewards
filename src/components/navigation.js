@@ -4,14 +4,36 @@ import style from '../../public/styles/navigation.module.css'
 
 const Navigation = () => {
     const [show, setShow] = useState(true)
-    const [user, setUser] = useState()
+    const [user, setUser] = useState('')
+    const [data, setData] = useState([])
 
     useEffect(() => {
         const player = localStorage.getItem('username')
+
         if (player) {
             setShow(false)
             setUser(player)
         }
+
+        const fetchData = async (player) => {
+            const url = `https://risingstargame.com/playerstats.asp?player=${player}`
+
+            try {
+                const response = await fetch(url)
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data')
+                }
+
+                const playerData = await response.json()
+
+                setData(playerData)
+            } catch (error) {
+                console.error('Error:', error)
+                // Handle errors more gracefully if needed
+            }
+        }
+
+        fetchData(player)
     }, []) // Empty dependency array ensures the effect runs only once after the initial render
 
     function login() {
@@ -63,7 +85,6 @@ const Navigation = () => {
                 </button>
                 {user ? (
                     <div style={{ display: show ? 'none' : 'block' }}>
-                        Welcome {user} ! ,{' '}
                         <button
                             className={style.logout}
                             onClick={() => {
@@ -71,6 +92,10 @@ const Navigation = () => {
                                 setShow(false)
                             }}
                         >
+                            {user}
+                            {' ('}
+                            <span className={style.level}>{`Level ${data[0]?.level}`}</span>
+                            {') '}
                             Logout
                         </button>
                     </div>

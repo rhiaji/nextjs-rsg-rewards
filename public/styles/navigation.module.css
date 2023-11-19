@@ -37,3 +37,11 @@
 .logout:hover {
     color: rgb(194, 76, 76);
 }
+
+.level {
+    color: #1a75b2;
+}
+
+.level:hover {
+    color: rgb(194, 76, 76);
+}

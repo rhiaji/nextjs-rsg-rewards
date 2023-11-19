@@ -11,5 +11,155 @@
     width: 1000px;
     height: 600px;
     margin-top: 50px;
+}
+
+.head {
+    display: flex;
+    height: 100px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.headBal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    width: 50%;
     background-color: #1a1919;
+    border: 1px solid #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1); /* Adjust the values as needed */
+}
+
+.balances {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.balances div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 50px;
+    margin-top: 10px;
+    background-color: #151414;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.balances div p {
+    margin-left: 10px;
+}
+
+.balances div button {
+    margin-left: 25px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+}
+
+.balances div button:hover {
+    color: rgb(194, 76, 76);
+    cursor: pointer;
+}
+
+.explain {
+    position: absolute;
+    top: -30px; /* Adjust this value based on your layout */
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    width: 100%;
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: 115px;
+    width: 20%;
+    border-radius: 10px;
+    background-color: #1a1919;
+    border: 1px solid #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1); /* Adjust the values as needed */
+}
+
+.stats div p {
+    margin-top: 10px;
+    color: #ffa500;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.stats2 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    width: 100%;
+}
+
+.stats2 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: 80px;
+    width: 20%;
+    border-radius: 10px;
+    background-color: #1a1919;
+    border: 1px solid #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1); /* Adjust the values as needed */
+}
+
+.stats2 div p {
+    margin-top: 10px;
+    color: #ffa500;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.searchDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchDiv input {
+    background-color: transparent;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    color: inherit;
+    outline: none;
+}
+
+.searchDiv button {
+    color: inherit;
+    border: none;
+    width: 40px;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.searchDiv button:hover {
+    color: rgb(194, 76, 76);
 }
