@@ -186,6 +186,31 @@ const AccountPage = () => {
                         </div>
                     </div>
                 </section>
+                <section>
+                    <div className={style.stats3}>
+                        <div>
+                            <h3>Website</h3>
+                            <a href="https://www.risingstargame.com/game.asp">
+                                <p>risingstargame</p>
+                            </a>
+                        </div>
+                        <div>
+                            <h3>MarketPlace</h3>
+                            <span>
+                                <a href="https://www.risingstargame.com/game.asp">
+                                    <p>rsgfam</p>
+                                </a>
+                                <a href="https://www.risingstargame.com/game.asp">
+                                    <p>NFTMart</p>
+                                </a>
+                            </span>
+                        </div>
+                        <div>
+                            <h3>Opened Packs</h3>
+                            <button>Check Cards</button>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     )
