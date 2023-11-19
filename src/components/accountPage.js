@@ -190,17 +190,17 @@ const AccountPage = () => {
                     <div className={style.stats3}>
                         <div>
                             <h3>Website</h3>
-                            <a href="https://www.risingstargame.com/game.asp">
+                            <a href="https://www.risingstargame.com/game.asp" target="_blank">
                                 <p>risingstargame</p>
                             </a>
                         </div>
                         <div>
                             <h3>3rd Party Marketplaces</h3>
                             <span>
-                                <a href="https://www.risingstargame.com/game.asp">
+                                <a href="https://www.risingstargame.com/game.asp" target="_blank">
                                     <p>rsgfam</p>
                                 </a>
-                                <a href="https://www.risingstargame.com/game.asp">
+                                <a href="https://www.risingstargame.com/game.asp" target="_blank">
                                     <p>NFTMart</p>
                                 </a>
                             </span>
