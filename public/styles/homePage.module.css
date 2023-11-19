@@ -124,3 +124,45 @@
     color: #faf4f4;
     font-size: 14px;
 }
+
+.search input {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    outline: none; /* Remove the default outline on focus */
+}
+
+.search button {
+    color: inherit;
+    border: none;
+    width: 60px;
+    margin-left: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.search button:hover {
+    color: rgb(194, 76, 76);
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px dotted gray;
+    margin-top: 20%;
+    margin-left: 45%;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

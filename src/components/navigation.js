@@ -42,6 +42,9 @@ const Navigation = () => {
                         <a href="/">Home</a>
                     </li>
                     <li>
+                        <a href="/account">Account</a>
+                    </li>
+                    <li>
                         <a href="/rave">Rave</a>
                     </li>
                     <li>
