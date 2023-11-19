@@ -6,7 +6,7 @@ const RankPage = () => {
     const [data, setData] = useState([])
     const [total, setTotal] = useState(0)
     const [loading, setLoading] = useState(false)
-    const [username, setUsername] = useState(localStorage.getItem('username'))
+    const [username, setUsername] = useState('')
 
     const fetchData = async (limit, offset, player) => {
         setLoading(true)
@@ -69,8 +69,10 @@ const RankPage = () => {
     }
 
     useEffect(() => {
-        // Usage
-        fetchData(1000, 0, username)
+        const userPlayer = localStorage.getItem('username')
+        setUsername(userPlayer)
+
+        fetchData(1000, 0, userPlayer)
             .then((history) => {
                 if (history.length === 0) {
                     console.log('No Raves Participated')
@@ -81,7 +83,7 @@ const RankPage = () => {
             .catch((error) => {
                 console.error('Error:', error)
             })
-    }, [username])
+    }, [])
 
     const handleSearch = () => {
         // Trigger data fetching when the search button is clicked
