@@ -116,7 +116,7 @@ const AccountPage = () => {
                             <div>
                                 {balance && balance.length > 1 && balance[1]?.balance !== undefined && (
                                     <>
-                                        <Image src="/starpro.png" width={20} height={20} alt="Starpro" />
+                                        <Image src="/images/starpro.png" width={20} height={20} alt="Starpro" />
                                         <p>{Number(balance[1]?.balance).toFixed(4)}</p>
                                         <button>
                                             <FontAwesomeIcon icon={faPaperPlane} />
@@ -131,7 +131,7 @@ const AccountPage = () => {
                                 {balance && balance.length > 0 && balance[0]?.balance !== undefined && (
                                     <>
                                         <a>
-                                            <Image src="/starbits.png" width={20} height={20} alt="Starbits" />
+                                            <Image src="/images/starbits.png" width={20} height={20} alt="Starbits" />
                                         </a>
                                         <p>{Number(balance[0]?.balance).toFixed(0)}</p>
                                         <button>
@@ -149,19 +149,19 @@ const AccountPage = () => {
                 <section>
                     <div className={style.stats}>
                         <div>
-                            <Image src="/total_fans.png" width={60} height={60} alt="fans" />
+                            <Image src="/images/total_fans.png" width={60} height={60} alt="fans" />
                             <p>{data[0]?.cardsfans}</p>
                         </div>
                         <div>
-                            <Image src="/total_luck.png" width={60} height={60} alt="luck" />
+                            <Image src="/images/total_luck.png" width={60} height={60} alt="luck" />
                             <p>{data[0]?.cardsluck}</p>
                         </div>
                         <div>
-                            <Image src="/total_skill.png" width={60} height={60} alt="skill" />
+                            <Image src="/images/total_skill.png" width={60} height={60} alt="skill" />
                             <p>{data[0]?.lessonskill}</p>
                         </div>
                         <div>
-                            <Image src="/total_im.png" width={60} height={60} alt="im" />
+                            <Image src="/images/total_im.png" width={60} height={60} alt="im" />
                             <p>{data[0]?.cardsim}</p>
                         </div>
                     </div>

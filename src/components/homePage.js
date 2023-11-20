@@ -63,7 +63,7 @@ const HomePage = () => {
                 </section>
                 <section className={style.news}>
                     <div>
-                        <Image src="/pmt.png" width={300} height={200} alt="pmt" />
+                        <Image src="/images/pmt.png" width={300} height={200} alt="pmt" />
                         <span>
                             <a href="https://peakd.com/hive-195370/@risingstargame/purchase-multiple-cards-in-one-transaction" target="_blank">
                                 Purchase Multiple Cards in One Transaction
@@ -86,7 +86,7 @@ const HomePage = () => {
                         </span>
                     </div>
                     <div>
-                        <Image src="/inc.png" width={300} height={200} alt="inc" />
+                        <Image src="/images/inc.png" width={300} height={200} alt="inc" />
                         <span>
                             <a href="https://peakd.com/hive-195370/@risingstargame/raves-rewards-increase" target="_blank">
                                 Raves Rewards Increase!
@@ -104,7 +104,7 @@ const HomePage = () => {
                         </span>
                     </div>
                     <div>
-                        <Image src="/lbrewards.png" width={300} height={200} alt="lbrewards" />
+                        <Image src="/images/lbrewards.png" width={300} height={200} alt="lbrewards" />
                         <span>
                             <a
                                 href="https://peakd.com/hive-195370/@risingstargame/increased-leaderboard-rewards-and-changes-to-reward-more-players"
@@ -127,7 +127,7 @@ const HomePage = () => {
                         </span>
                     </div>
                     <div>
-                        <Image src="/changesml.png" width={740} height={200} alt="changesml" />
+                        <Image src="/images/changesml.png" width={740} height={200} alt="changesml" />
                         <span>
                             <a href="https://peakd.com/hive-195370/@risingstargame/changes-to-music-lessons-increase-in-rewards" target="_blank">
                                 Changes to Music Lessons / Increase in Rewards
@@ -148,7 +148,7 @@ const HomePage = () => {
                         </span>
                     </div>
                     <div>
-                        <Image src="/drop.png" width={300} height={200} alt="drop" />
+                        <Image src="/images/drop.png" width={300} height={200} alt="drop" />
                         <span>
                             <a href="https://peakd.com/hive-195370/@risingstargame/new-dj-drip-drop-drip" target="_blank">
                                 New "DJ Drip Drop" + DRIP Rewards for the TOP 100!
@@ -170,7 +170,7 @@ const HomePage = () => {
                         </span>
                     </div>
                     <div>
-                        <Image src="/tip.png" width={390} height={200} alt="tip" />
+                        <Image src="/images/tip.png" width={390} height={200} alt="tip" />
                         <span>
                             <a
                                 href="https://peakd.com/hive-195370/@risingstargame/you-can-now-tip-radio-tracks-and-support-hive-musicians"
@@ -192,7 +192,7 @@ const HomePage = () => {
                         </span>
                     </div>
                     <div>
-                        <Image src="/ravesbutton.png" width={830} height={200} alt="ravesbutton" />
+                        <Image src="/images/ravesbutton.png" width={830} height={200} alt="ravesbutton" />
                         <span>
                             <a
                                 href="https://peakd.com/hive-195370/@risingstargame/some-tweaking-of-the-new-raves-holiday-sickness-formula"
@@ -215,7 +215,7 @@ const HomePage = () => {
                         </span>
                     </div>
                     <div>
-                        <Image src="/titbits.jpg" width={300} height={200} alt="titbits" />
+                        <Image src="/images/titbits.jpg" width={300} height={200} alt="titbits" />
                         <span>
                             <a href="https://peakd.com/hive-195370/@risingstargame/rising-star-pro-map-a-few-titbits" target="_blank">
                                 Rising Star "PRO" Map - a few "titbits"
@@ -235,7 +235,7 @@ const HomePage = () => {
                         </span>
                     </div>
                     <div>
-                        <Image src="/ravetut.png" width={300} height={200} alt="ravetut" />
+                        <Image src="/images/ravetut.png" width={300} height={200} alt="ravetut" />
                         <span>
                             <a href="https://peakd.com/hive-195370/@risingstargame/raves-tutorial" target="_blank">
                                 Raves Tutorial
@@ -253,7 +253,7 @@ const HomePage = () => {
                         </span>
                     </div>
                     <div>
-                        <Image src="/ravelive.png" width={1000} height={200} alt="ravelive" />
+                        <Image src="/images/ravelive.png" width={1000} height={200} alt="ravelive" />
                         <span>
                             <a href="https://peakd.com/hive-195370/@risingstargame/raves-goes-live-on-friday" target="_blank">
                                 Raves Goes Live on FRIDAY!
@@ -272,7 +272,7 @@ const HomePage = () => {
                         </span>
                     </div>
                     <div>
-                        <Image src="/upvote.jpg" width={400} height={200} alt="upvote" />
+                        <Image src="/images/upvote.jpg" width={400} height={200} alt="upvote" />
                         <span>
                             <a href="https://peakd.com/hive-195370/@risingstargame/upvotes-for-giveaway-posts-new-requirement" target="_blank">
                                 Upvotes for Giveaway Posts - New Requirement
