@@ -24,7 +24,7 @@
 
 .head div {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
 }
 
@@ -165,4 +165,22 @@
     100% {
         transform: rotate(360deg);
     }
+}
+
+.rewardsbtn button {
+    background-color: transparent;
+    margin-top: 5px;
+    width: 200px;
+    height: 25px;
+    color: #0099ff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.4s ease;
+}
+
+.rewardsbtn button:hover {
+    color: rgb(194, 76, 76);
 }

@@ -3,15 +3,20 @@ import React, { useState, useEffect } from 'react'
 import style from '../../public/styles/rewardsPage.module.css'
 
 const RankPage = () => {
+    const [show, setShow] = useState(true)
+    const [symbol, setSymbol] = useState('')
     const [data, setData] = useState([])
     const [total, setTotal] = useState(0)
     const [loading, setLoading] = useState(false)
     const [username, setUsername] = useState('')
+    const drip = 'DRIP'
+    const hive = 'SWAP.HIVE'
 
-    const fetchData = async (limit, offset, player) => {
+    const fetchData = async (limit, offset, player, symbol) => {
         setLoading(true)
         let allHistory = []
         let history = []
+        let sbl
         let rewards = 0
         let hasMoreData = true
 
@@ -21,7 +26,7 @@ const RankPage = () => {
         setUsername(fetchUsername) // Update the state with the final value
 
         while (hasMoreData) {
-            const url = `https://history.hive-engine.com/accountHistory?account=${fetchUsername}&limit=${limit}&offset=${offset}&symbol=SWAP.HIVE`
+            const url = `https://history.hive-engine.com/accountHistory?account=${fetchUsername}&limit=${limit}&offset=${offset}&symbol=${symbol}`
 
             try {
                 const response = await fetch(url)
@@ -47,12 +52,23 @@ const RankPage = () => {
         allHistory.forEach((result) => {
             const memo = result.memo
 
+            sbl = result.symbol
+
             // Check if memo is not null and is defined before splitting
             if (memo !== null && memo !== undefined) {
                 const daily = memo.split(' ')
-                const reward = daily[1] + ' ' + daily[2] + ' ' + daily[3]
+                const rewardHive = daily[1] + ' ' + daily[2] + ' ' + daily[3]
+                const rewardDrip = daily[3] + ' ' + daily[4]
 
-                if (reward === 'daily ranking reward') {
+                if (rewardHive === 'daily ranking reward') {
+                    history.push(result)
+
+                    if (rewards === 0) {
+                        rewards = Number(result.quantity)
+                    } else {
+                        rewards += Number(result.quantity)
+                    }
+                } else if (rewardDrip === 'DRIP reward') {
                     history.push(result)
 
                     if (rewards === 0) {
@@ -63,6 +79,8 @@ const RankPage = () => {
                 }
             }
         })
+
+        setSymbol(sbl)
         setTotal(rewards)
         setData(history)
         setLoading(false)
@@ -72,7 +90,7 @@ const RankPage = () => {
         const userPlayer = localStorage.getItem('username')
         setUsername(userPlayer)
 
-        fetchData(1000, 0, userPlayer)
+        fetchData(1000, 0, userPlayer, hive)
             .then((history) => {
                 if (history.length === 0) {
                     console.log('No Raves Participated')
@@ -88,7 +106,15 @@ const RankPage = () => {
     const handleSearch = () => {
         // Trigger data fetching when the search button is clicked
         let player = document.getElementById('playerName').value
-        fetchData(1000, 0, player)
+        fetchData(1000, 0, player, hive)
+    }
+
+    const dripReward = () => {
+        fetchData(1000, 0, username, drip)
+    }
+
+    const hiveReward = () => {
+        fetchData(1000, 0, username, hive)
     }
 
     return (
@@ -97,8 +123,28 @@ const RankPage = () => {
                 <section className={style.head}>
                     <div>
                         <p>
-                            Total Rank Rewards: <span className={style.total}>{total.toFixed(4)}</span> SWAP.HIVE
+                            Total Rewards: <span className={style.total}>{total.toFixed(4)}</span> {total.toFixed(0) != 0 ? symbol : 'No Reward'}
                         </p>
+                    </div>
+                    <div className={style.rewardsbtn}>
+                        <button
+                            onClick={() => {
+                                dripReward()
+                                setShow(false)
+                            }}
+                            style={{ display: show ? 'block' : 'none' }}
+                        >
+                            Get DRIP Rewards
+                        </button>
+                        <button
+                            onClick={() => {
+                                hiveReward()
+                                setShow(true)
+                            }}
+                            style={{ display: show ? 'none' : 'block' }}
+                        >
+                            Get SWAP.HIVE Rewards
+                        </button>
                     </div>
                     <div className={style.search}>
                         <input type="text" id="playerName" placeholder="Search by username..." />
@@ -134,7 +180,7 @@ const RankPage = () => {
                                         </div>
                                         <div className={style.tx}>
                                             <span className={style.quantity}>
-                                                {rewards.quantity} <span className={style.hive}>SWAP.HIVE</span>
+                                                {rewards.quantity} <span className={style.hive}>{symbol}</span>
                                             </span>
                                         </div>
                                     </div>

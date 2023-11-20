@@ -97,7 +97,7 @@ const RavePage = () => {
                 <section className={style.head}>
                     <div>
                         <p>
-                            Total Rave Rewards: <span className={style.total}>{total.toFixed(4)}</span> SWAP.HIVE
+                            Total Rewards: <span className={style.total}>{total.toFixed(4)}</span> SWAP.HIVE
                         </p>
                     </div>
                     <div className={style.search}>
