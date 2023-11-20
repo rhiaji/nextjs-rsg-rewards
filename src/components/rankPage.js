@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import style from '../../public/styles/homePage.module.css'
+import style from '../../public/styles/rewardsPage.module.css'
 
 const RankPage = () => {
     const [data, setData] = useState([])

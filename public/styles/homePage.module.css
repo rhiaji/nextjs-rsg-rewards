@@ -9,160 +9,50 @@
     display: flex;
     flex-direction: column;
     width: 1000px;
-    height: 600px;
     margin-top: 50px;
-    background-color: #1a1919;
+    margin-bottom: 100px;
+    line-height: 30px;
 }
 
-.head {
-    display: flex;
-    padding: 10px;
-    width: 100%;
-    height: 50px;
-    border: 1px solid #2e2d2d;
+.content section {
+    margin-top: 20px;
 }
 
-.head div {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.content ul {
+    list-style: none;
 }
 
-.headtx {
-    text-align: center;
-    display: flex;
-    padding: 10px;
-    width: 100%;
-    height: 50px;
-    border: 1px solid #2e2d2d;
+.content li {
+    margin-top: 20px;
 }
 
-.headtx div {
-    width: 20%;
+.content a {
+    color: #1a75b2;
 }
 
-.headtx div:first-child {
-    width: 40%;
-}
-
-.section {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 100%;
-    height: 140px;
-    border: 1px solid #2e2d2d;
-}
-
-.section div {
-    display: flex;
-}
-
-.section div a:hover {
-    cursor: pointer;
+.content a:hover {
     color: rgb(194, 76, 76);
 }
 
-.tx {
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-}
-
-.tx:first-child {
-    width: 40%;
-}
-
-.transactions {
-    width: 100%;
-    height: 500px;
-    overflow-y: scroll;
-}
-
-.memo {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    height: 80px;
-    margin-top: 10px;
-    border: 1px solid #2e2d2d;
-    background-color: #151414;
-    border-radius: 20px;
-    font-size: 14px;
-}
-
-.memo div {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-top: 5px;
-}
-
-.memo div span:nth-child(1) {
-    width: 10%;
-}
-
-.memo div span:nth-child(2) {
-    margin-top: 5px;
-}
-
-.total {
-    color: #1a75b2;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.quantity {
-    color: #1a75b2;
-    font-size: 14px;
-}
-
-.hive {
-    color: #faf4f4;
-    font-size: 14px;
-}
-
-.search input {
-    background-color: transparent;
-    border: none;
-    color: inherit;
-    outline: none; /* Remove the default outline on focus */
-}
-
-.search button {
-    color: inherit;
-    border: none;
-    width: 60px;
-    margin-left: 5px;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.search button:hover {
+.content strong {
     color: rgb(194, 76, 76);
 }
 
-.loader {
-    width: 48px;
-    height: 48px;
-    border: 5px dotted gray;
-    margin-top: 20%;
-    margin-left: 45%;
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-    box-sizing: border-box;
-    animation: rotation 2s linear infinite;
+.blue {
+    color: #1a75b2;
 }
 
-@keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.news div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.news div span {
+    margin-left: 20px;
+}
+
+.news ul {
+    list-style: inherit;
+    margin-left: 40px;
 }
