@@ -53,6 +53,9 @@ const HomePage = () => {
                             @rhiaji
                         </a>
                     </p>
+                    <p>
+                        <a href="https://www.risingstargame.com?referrer=dvpm">Don't have an account? Join us now!</a>
+                    </p>
                 </section>
 
                 <section>
