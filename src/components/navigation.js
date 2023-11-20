@@ -40,7 +40,7 @@ const Navigation = () => {
         const username = window.prompt('Enter Hive Username')
         const lowercasedUsername = username.toLowerCase()
 
-        hive_keychain.requestSignBuffer(lowercasedUsername, 'AutoCore Login', 'Posting', function (response) {
+        hive_keychain.requestSignBuffer(lowercasedUsername, 'Rsg Rewards Login', 'Posting', function (response) {
             if (response.success) {
                 setUser(lowercasedUsername)
                 localStorage.setItem('username', lowercasedUsername)
