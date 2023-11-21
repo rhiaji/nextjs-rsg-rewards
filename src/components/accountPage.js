@@ -14,8 +14,11 @@ const AccountPage = () => {
     const [balance, setBalance] = useState([])
     const [packs, setPacks] = useState()
     const [user, setUser] = useState('')
+    const [loading, setLoading] = useState(false)
 
     const fetchCards = async () => {
+        setLoading(true)
+
         let limit = 1000
         let offset = 0
         let targetLimit = 3000
@@ -72,6 +75,7 @@ const AccountPage = () => {
 
         console.log(packs)
         setPacks(packs)
+        setLoading(false)
     }
 
     const fetchData = async (player) => {
@@ -171,47 +175,51 @@ const AccountPage = () => {
                     <div>Date</div>
                     <div>Cards</div>
                 </section>
-                <div className={style.transactions}>
-                    {packs &&
-                        packs.map((result) => (
-                            <section className={style.section}>
-                                <div className={style.timestamp}>
-                                    <span>
-                                        <h4>{new Date(result[0].timestamp * 1000).toLocaleString()}</h4>
-                                    </span>
-                                    <span>
-                                        <a href={`https://hivehub.dev/tx/${result[0].tx}`}>Tx: {result[0].tx}</a>
-                                    </span>
-                                    <span>
-                                        <a href={`https://hivehub.dev/tx/${result[1].tx}`}>Tx: {result[1].tx}</a>
-                                    </span>
-                                    <span>
-                                        <a href={`https://hivehub.dev/tx/${result[2].tx}`}>Tx: {result[2].tx}</a>
-                                    </span>
-                                </div>
-                                <div className={style.cards}>
-                                    <div className={style.cardsContent}>
-                                        <span>Type: {result[0].type}</span>
-                                        <span>Class: {result[0].class}</span>
-                                        <span>Stats: {result[0].stats}</span>
-                                        <span>NFT ID: {result[0].nft}</span>
+                {loading ? (
+                    <span className={style.loader}></span>
+                ) : (
+                    <div className={style.transactions}>
+                        {packs &&
+                            packs.map((result) => (
+                                <section className={style.section}>
+                                    <div className={style.timestamp}>
+                                        <span>
+                                            <h4>{new Date(result[0].timestamp * 1000).toLocaleString()}</h4>
+                                        </span>
+                                        <span>
+                                            <a href={`https://hivehub.dev/tx/${result[0].tx}`}>Tx: {result[0].tx}</a>
+                                        </span>
+                                        <span>
+                                            <a href={`https://hivehub.dev/tx/${result[1].tx}`}>Tx: {result[1].tx}</a>
+                                        </span>
+                                        <span>
+                                            <a href={`https://hivehub.dev/tx/${result[2].tx}`}>Tx: {result[2].tx}</a>
+                                        </span>
                                     </div>
-                                    <div className={style.cardsContent}>
-                                        <span>Type: {result[1].type}</span>
-                                        <span>Class: {result[1].class}</span>
-                                        <span>Stats: {result[1].stats}</span>
-                                        <span>NFT ID: {result[1].nft}</span>
+                                    <div className={style.cards}>
+                                        <div className={style.cardsContent}>
+                                            <span>Type: {result[0].type}</span>
+                                            <span>Class: {result[0].class}</span>
+                                            <span>Stats: {result[0].stats}</span>
+                                            <span>NFT ID: {result[0].nft}</span>
+                                        </div>
+                                        <div className={style.cardsContent}>
+                                            <span>Type: {result[1].type}</span>
+                                            <span>Class: {result[1].class}</span>
+                                            <span>Stats: {result[1].stats}</span>
+                                            <span>NFT ID: {result[1].nft}</span>
+                                        </div>
+                                        <div className={style.cardsContent}>
+                                            <span>Type: {result[2].type}</span>
+                                            <span>Class: {result[2].class}</span>
+                                            <span>Stats: {result[2].stats}</span>
+                                            <span>NFT ID: {result[2].nft}</span>
+                                        </div>
                                     </div>
-                                    <div className={style.cardsContent}>
-                                        <span>Type: {result[2].type}</span>
-                                        <span>Class: {result[2].class}</span>
-                                        <span>Stats: {result[2].stats}</span>
-                                        <span>NFT ID: {result[2].nft}</span>
-                                    </div>
-                                </div>
-                            </section>
-                        ))}
-                </div>
+                                </section>
+                            ))}
+                    </div>
+                )}
             </div>
             <div className={style.content} style={{ display: show ? 'block' : 'none' }}>
                 <section className={style.search}>
