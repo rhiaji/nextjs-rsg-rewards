@@ -4,6 +4,7 @@ import Image from 'next/image'
 import style from '../../public/styles/accountPage.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane, faShop, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import filter from './filterData' // Import the filter array
 
 const SSC = require('sscjs')
 const ssc = new SSC('https://api2.hive-engine.com/rpc')
@@ -34,7 +35,7 @@ const AccountPage = () => {
                 const data = await response.json()
 
                 data.forEach((element) => {
-                    if (element.operation === 'nft_issueMultiple') {
+                    if (element.operation === 'nft_issueMultiple' && !filter.includes(element.properties.type)) {
                         const card = {
                             type: element.properties.type,
                             class: element.properties.class,
