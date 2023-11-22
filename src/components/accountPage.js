@@ -188,13 +188,19 @@ const AccountPage = () => {
                                             <h4>{new Date(result[0].timestamp * 1000).toLocaleString()}</h4>
                                         </span>
                                         <span>
-                                            <a href={`https://hivehub.dev/tx/${result[0].tx}`}>Tx: {result[0].tx}</a>
+                                            <a href={`https://hivehub.dev/tx/${result[0].tx}`} target="_blank">
+                                                Tx: {result[0].tx}
+                                            </a>
                                         </span>
                                         <span>
-                                            <a href={`https://hivehub.dev/tx/${result[1].tx}`}>Tx: {result[1].tx}</a>
+                                            <a href={`https://hivehub.dev/tx/${result[1].tx}`} target="_blank">
+                                                Tx: {result[1].tx}
+                                            </a>
                                         </span>
                                         <span>
-                                            <a href={`https://hivehub.dev/tx/${result[2].tx}`}>Tx: {result[2].tx}</a>
+                                            <a href={`https://hivehub.dev/tx/${result[2].tx}`} target="_blank">
+                                                Tx: {result[2].tx}
+                                            </a>
                                         </span>
                                     </div>
                                     <div className={style.cards}>
